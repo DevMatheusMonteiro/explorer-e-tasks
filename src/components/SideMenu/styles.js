@@ -22,13 +22,18 @@ export const Container = styled.aside`
       transform: translateX(0);
     }
   }
-
 `;
 
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 32px 24px;
+
+  > button {
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -87,12 +92,11 @@ export const Footer = styled.footer`
 `;
 
 export const Button = styled.button`
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 
   > svg {
     font-size: 20px;
     color: ${({ theme }) => theme.COLORS.GRAY_300};
   }
 `;
-
